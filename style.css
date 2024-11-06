@@ -1,73 +1,76 @@
-/* Reset básico de margin e padding */
+/* Reset básico para garantir consistência entre navegadores */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Cor de fundo e estilo geral do corpo */
+/* Estilo do corpo da página */
 body {
-    background: linear-gradient(135deg, #121212, #1e1e1e);
-    color: #fff;
+    background: #121212; /* Fundo escuro para contraste */
+    color: white;
     font-family: "Chakra Petch", sans-serif;
     margin-bottom: 100px;
     line-height: 1.6;
 }
 
-/* Estilo do cabeçalho */
+/* Cabeçalho estilizado */
 header {
-    border-bottom: solid 3px rgb(42, 122, 228);
-    padding: 20px 0;
-    text-align: center;
+    border-bottom: 3px solid #2980b9; /* Azul vibrante */
+    padding: 20px;
     font-size: 36px;
-    color: rgb(42, 122, 228);
-    letter-spacing: 2px;
-    font-weight: bold;
+    color: #2980b9; /* Azul mais suave */
+    text-align: center;
     text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
-/* Estilo da seção chamada (vídeo destacado) */
+/* Estilo para a seção chamada (vídeo principal) */
 .chamada {
-    background: linear-gradient(135deg, rgb(184, 156, 213), rgb(131, 115, 173));
+    background: linear-gradient(135deg, #8e44ad, #9b59b6); /* Gradiente roxo suave */
     padding: 80px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    border-bottom: 5px solid rgb(42, 122, 228);
+    border-bottom: 4px solid #2980b9;
 }
 
-/* Ajustes para o texto da chamada */
 .chamada-texto {
-    max-width: 500px;
-    text-align: left;
+    max-width: 600px;
+    text-align: center;
+    margin-right: 30px;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 50px;
     font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1.2;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); /* Efeito de sombra para dar destaque */
 }
 
 p {
-    font-size: 24px;
-    color: rgb(42, 122, 228);
+    font-size: 22px;
+    color: #2980b9; /* Azul suave */
+    font-weight: 500;
 }
 
 /* Estilo para a seção de categorias de vídeos */
 .categoria {
     padding: 40px 20px;
-    background: rgb(32, 32, 32);
-    border-radius: 10px;
+    background: #2c3e50; /* Tom escuro e elegante */
+    border-radius: 12px;
     margin-top: 50px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Sombra suave */
 }
 
 .categoria h2 {
-    color: rgb(42, 122, 228);
+    color: #2980b9; /* Azul suave */
     font-size: 28px;
-    margin-bottom: 20px;
     text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 /* Estilo para o carrossel de vídeos */
@@ -75,21 +78,22 @@ p {
     display: flex;
     gap: 20px;
     overflow-x: auto;
-    padding-bottom: 20px;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
+/* Estilo para os links de vídeos */
 .categoria-videos a {
     position: relative;
     display: inline-block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Estilo das miniaturas */
+/* Estilo das miniaturas de vídeo */
 .categoria-videos img {
-    border-radius: 10px;
-    opacity: 0.7;
-    height: 200px;
+    border-radius: 12px;
+    opacity: 0.75;
+    height: 250px;
     width: 350px;
     object-fit: cover;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -98,29 +102,29 @@ p {
 /* Efeito hover nas imagens */
 .categoria-videos img:hover {
     opacity: 1;
-    transform: scale(1.05);
-    border: 5px solid rgb(42, 122, 228);
+    transform: scale(1.05); /* Zoom suave */
+    border: 4px solid #2980b9; /* Borda azul ao passar o mouse */
 }
 
-/* Adicionando efeito nos links */
+/* Adicionando efeito de hover no link */
 .categoria-videos a:hover {
     transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Efeito de sombra mais forte */
 }
 
-/* Responsividade para telas menores */
+/* Responsividade para dispositivos menores */
 @media (max-width: 768px) {
     .chamada-texto h1 {
-        font-size: 36px;
+        font-size: 40px;
     }
 
     .chamada-texto p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .categoria-videos img {
-        height: 150px;
-        width: 250px;
+        height: 200px;
+        width: 280px;
     }
 
     .categoria h2 {
@@ -134,7 +138,7 @@ p {
     }
 
     .chamada-texto h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .chamada-texto p {
@@ -142,7 +146,7 @@ p {
     }
 
     .categoria-videos img {
-        height: 120px;
-        width: 200px;
+        height: 150px;
+        width: 220px;
     }
 }
